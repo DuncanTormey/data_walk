@@ -190,19 +190,6 @@ def download_attachments(token_file, attachments_df, dirpath=''):
     return outfiles
 
 
-# Kit Items
-# /zanmodules/molecular-biology/ngs/requests/{id}/kit-items
-# or
-# /zanmodules/molecular-biology/ngs/requests/{id}/unique-kit-items
-
-# {id} here is the request ID like MOLNG-123
-
-# Pools
-# /zanmodules/molecular-biology/ngs/requests/{identifier}/pools
-
-# {identifier} here is the request ID like MOLNG-123
-
-
 def request_additional_oder_items(token_file, order_id, url_template):
     with open(token_file, 'r') as fh:
         token = fh.readline().strip('\n')
@@ -232,9 +219,9 @@ if __name__ == "__main__":
     token_file = '../data/lims_token.txt'
 
     # constant modified searches
-    order_search = order_search % LIMS_DEPARTMENT_ID
-    sample_search = sample_search % (LIMS_DEPARTMENT_ID, '%s')
-    lib_search = lib_search % (LIMS_DEPARTMENT_ID, '%s')
+    order_search = order_search % lims_department_id
+    sample_search = sample_search % (lims_department_id, '%s')
+    lib_search = lib_search % (lims_department_id, '%s')
 
     ###########################################################################
     ############################# Baumann Lab Run #############################
