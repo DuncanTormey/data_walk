@@ -1,10 +1,3 @@
-#!/usr/bin/env python
-# Author: Duncan Tormey
-# Email: dut@stowers.org or duncantormey@gmail.com
-import requests
-from requests.auth import HTTPBasicAuth
-from requests.utils import quote
-
 # !/usr/bin/env python
 # Author: Duncan Tormey
 # Email: dut@stowers.org or duncantormey@gmail.com
